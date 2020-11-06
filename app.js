@@ -140,4 +140,126 @@ a += 12;
 b += 9;
 c += 7;
 
-//15. COMPOUND ASSIGNMENT WITH AUGMENTED SUBTRACTION
+//16. COMPOUND ASSIGNMENT WITH AUGMENTED SUBTRACTION
+a = 11;
+b = 9;
+c = 3;
+
+a -= 6;
+b -= 15;
+c -= 1;
+
+//17. COMPOUND ASSIGNMENT WITH AUGMENTED MULTIPLICATIOn
+a = 5;
+b = 12;
+c = 4.6;
+
+a *= 5;
+b *= 3;
+c *= 10;
+
+//18. COMPOUND ASSIGNMENT WITH AUGMENTED DIVISION
+
+a = 48;
+b = 108;
+c = 33;
+
+a /= 12;
+b /= 4;
+c /= 11;
+
+//19. DECLARE STRING VARIABLES
+
+var firstName = "Alan";
+var lastName = "Turing";
+
+var myFirstName = "Jorge";
+var myLastName = "Diaz";
+
+//20. ESCAPING LITERAL QUOTES IN STRINGS
+
+var myStr = 'I am a a "double quoted" string inside "double quotes"';
+
+console.log(myStr);
+
+//21 ECAPING WITH SINGLE OR DOUBLE QUOTES
+
+var myStr = '<a href="htttp://www.example.com" target="_blank">Link</a>';
+console.log(myStr);
+
+var backTicks = `'<a href="htttp://www.example.com" target="_blank">Link</a>'`;
+
+console.log(backTicks);
+
+//22. OTHER ESCAPE CHARACTERS
+
+/***********
+ *      CODE    OUTPUT
+ *      \'      single quote
+ *      \""     double quote
+ *      \\      backslash
+ *      \n      newline
+ *      \r      carriage return
+ *      \t      tab
+ *      \b      backspace
+ *      \f      form feed
+ */
+
+var myString = "FirstLine\n\t\\SecondLine\nThirdLine";
+
+//23. CONCATENATING STRINGS WITH PLUS OPERATOR
+
+var ourStr = "First string. " + " Second String";
+
+var myStr;
+"This is the start. " + "This is the end.";
+
+console.log(myStr);
+
+//24. CONCATENATING STRINGS WITH PLUS EQUALS OPERATOR
+var otherStr = "I come first. ";
+otherStr += "I come second.";
+
+var twoStr = "First sentence. ";
+twoStr += "Second sentence";
+
+console.log(twoStr);
+
+//25. CONSTRUCTING STRINGS WITH VARIABLES
+var ourName = "jfdcDevOps";
+var ourStr = "Hello, our name is " + ourName + ", how are you?";
+
+var myName = "Jorge";
+var myStr = "My Name is " + myName + " and I am doing awesome";
+console.log(myStr);
+
+//26. APPENDING VARIABLES TO STRINGS
+var anAdjective = "awesome!";
+var ourStr = "freeCodeCamp is ";
+ourStr += anAdjective;
+
+var someAdj = "worthwhile";
+var myStr = "Learning to code is ";
+myStr += someAdj;
+
+//27. FIND LENGTH OF STRING
+var firstNameLength = 0;
+var firstName = "Ada";
+
+firstNameLength = firstName.length;
+
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+lastNameLength = lastName.length;
+
+//28. BRACKET NOTATION TO FIND FIRST CHARACTER IN STRING
+var FirstLetterOfFirstName = "";
+var firstName = "Ada";
+
+FirstLetterOfFirstName = firstName[0];
+
+var FirstLetterOfLastName = "";
+var lastName = "Lovelace";
+
+FirstLetterOfLastName = lastName[0];
