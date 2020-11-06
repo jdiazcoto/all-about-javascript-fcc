@@ -82,7 +82,7 @@ titleCaseOver = 9000;
 
 //5. ADDING NUMBERS
 var sum = 10 + 0;
-console.log(sume);
+console.log(sum);
 
 //6. SUBTRACTING NUMBERS
 var difference = 10 - 3;
@@ -226,7 +226,7 @@ twoStr += "Second sentence";
 console.log(twoStr);
 
 //25. CONSTRUCTING STRINGS WITH VARIABLES
-var ourName = "jfdcDevOps";
+ourName = "jfdcDevOps";
 var ourStr = "Hello, our name is " + ourName + ", how are you?";
 
 var myName = "Jorge";
@@ -254,12 +254,48 @@ var lastName = "Lovelace";
 lastNameLength = lastName.length;
 
 //28. BRACKET NOTATION TO FIND FIRST CHARACTER IN STRING
-var FirstLetterOfFirstName = "";
+var firstLetterOfFirstName = "";
 var firstName = "Ada";
 
-FirstLetterOfFirstName = firstName[0];
+firstLetterOfFirstName = firstName[0];
 
-var FirstLetterOfLastName = "";
+var firstLetterOfLastName = "";
 var lastName = "Lovelace";
 
-FirstLetterOfLastName = lastName[0];
+firstLetterOfLastName = lastName[0];
+
+//29. STRING IMMUTABILITY
+var myStr = "Jello World";
+
+myStr[0] = "H"; //THIS WILL NOT WORK
+
+myStr = "Hello World";
+
+//29. BRACKET NOTATION FIND NTH CHARACTER IN STRING
+var secondLetterOfFirstName = "";
+var firstName = "Ada";
+
+secondtLetterOfFirstName = firstName[1];
+
+var thirdtLetterOfLastName = "";
+var lastName = "Lovelace";
+
+thirdtLetterOfLastName = lastName[2];
+
+//30. BRACKET NOTATION TO FIND LAST CHARACTER IN STRING
+var lastLetterOfFirstName = "";
+var firstName = "Ada";
+
+lasttLetterOfFirstName = firstName[firstName.length - 1];
+
+var lastLetterOfLastName = "";
+var lastName = "Lovelace";
+
+lastLetterOfLastName = lastName[lastName.length - 1];
+
+//31. BRACKET NOTATION FO FIN THE NTH-TO-LAST CHARACTER IN STRING
+var firstName = "Ada";
+var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+console.log(thirdToLastLetterOfFirstName);
+var lastName = "Lovelace";
+var secondToLastLetterOfLastName = lastName[lastName.length - 2];
