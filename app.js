@@ -384,7 +384,7 @@ var removedFromOurArray = myArray.shift();
 
 //41. MANIPULATE ARRAYS WITH unshift()
 var ourArray = ["Stimpson", "J", "cat"];
-ourAarray.shift(); //ourArray now equals ["J", "cat"]
+ourArray.shift(); //ourArray now equals ["J", "cat"]
 ourArray.unshift("Happy"); //ourArray now equals ["Happy", "J","cat"]
 
 var myArray = [
@@ -421,3 +421,144 @@ reusableFunction();
 reusableFunction();
 
 //44. PASSING VALUES TO FUNCTIONS WITH ARGUMENTS
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+
+ourFunctionWithArgs(10, 5);
+
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+
+functionWithArgs(10, 5);
+
+//45. GLOBAL SCOPE AND FUNCTIONS
+var myGlobal = 10;
+
+function fun1() {
+  // Assigne 5 to oopsGlobal Here
+  oopsGlobal = 5; //NO var Keyword means it is GLOBAL
+}
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+
+  console.log(output);
+}
+
+fun1();
+fun2();
+
+//46. LOCAL SCOPE AND FUNCTIONS
+function myLocalScope() {
+  var myVarLocal = 5;
+  console.log(myVarLocal);
+}
+
+myLocalScope();
+
+//WOULD GIVE AN ERROR: console.log(myVarLocal);
+
+//47. GLOBAL VS. LOCAL SCOPE IN FUNCTIONS
+var outerWear = "T-Shirt";
+
+function myOutFit() {
+  var outerWear = "Sweater";
+  return outerWear;
+}
+
+console.log(myOutFit());
+console.log(outerWear);
+
+//48. RETURN A VALUE FROM A FUNCTION WITH RETURN
+function minusSeven(num) {
+  return num - 7;
+}
+
+function timesFive(num) {
+  return num * 5;
+}
+console.log(minusSeven(10));
+console.log(timesFive(5));
+
+//49. UNDERSTANDING UNDEFINED VALUE RETURNED FROM A FUNCTION
+var sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+function addFive() {
+  sum *= 5;
+}
+
+console.log(addFive());
+console.log(addThree());
+
+//50. ASSSIGNMENT WITH A RETURNED VALUE
+var changed = 0;
+
+function change(num) {
+  return (num + 5) / 3;
+}
+
+changed = change(10);
+
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7);
+
+//51. STAND IN LINE
+function nextInLine(arr, item) {
+  arr.push(item);
+
+  return arr.shift();
+}
+
+var testArr = [1, 2, 3, 4, 5];
+
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+//52. BOOLEAN VALUES
+function welcomeToBooleans() {
+  return false;
+}
+
+//53. USE CONDITIONAL LOGIC WITH IF STATEMENTS
+function ourTrueOrFals(isItTrue) {
+  if (isItTrue) {
+    return "Yes true";
+  }
+  return "No, False";
+}
+
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue) {
+    return "Yes that was true";
+  }
+  return "No that was false";
+}
+
+console.log(trueOrFalse(true));
+
+//54. COMPARISON WITH THE EQUALITY OPERATOR
+function testEqual(val) {
+  if (val == 12) {
+    return "Equal";
+  }
+
+  return "Not equal";
+}
+
+console.log(testEqual(10));
