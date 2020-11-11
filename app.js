@@ -674,3 +674,5 @@ function testLogicalAnd(val) {
 }
 
 testLogicalAnd(10);
+
+//64. COMPRISONS WITH THE LOGICAL OR OPERATOR
