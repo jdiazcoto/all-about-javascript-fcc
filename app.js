@@ -562,3 +562,115 @@ function testEqual(val) {
 }
 
 console.log(testEqual(10));
+
+//55. COMPARISON WITH THE STRICT EQUALITY OPERATOR
+function testStrict(val) {
+  if (val === 7) {
+    return "Equal";
+  }
+
+  return "Not equal";
+}
+
+/*
+3 === 3     TRUE
+3 === "3"   FALSE
+
+*/
+
+console.log(testStrict(10));
+
+//56. PRACTICE COMPARING DIFFERENT VALUES
+function compareEquality(a, b) {
+  if (a == b) {
+    //PERFORMS  A TYPE CONVERSION
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(compareEquality(10, "10"));
+
+//57. COMPARISON WITH THE INEQUALITY OPERATOR
+function testNotEqual(val) {
+  if (val != 99) {
+    return "Not equal";
+  }
+  return "Equal";
+}
+
+console.log(testNotEqual(10));
+
+//58. COMPARISON WITH THE STRICT INEQUALITY OPERATOR
+function testStricNotEqual(val) {
+  if (val !== 17) {
+    //NO TYPE CONVERSION
+    return "Not equal";
+  }
+  return "Equal";
+}
+
+console.log(testStrictNotEqual(10));
+
+//59. COMPARISON WITH LOGICAL GREATER THAN OPERATOR
+function testGreaterThan(val) {
+  if (val > 100) {
+    return "Over 100";
+  }
+  if (val > 10) {
+    return "Over 10 ";
+  }
+  return "10 or under";
+}
+
+console.log(testGreaterThan(10));
+
+//60.  COMPARISON WITH THE GRETAER THAN OR EQUAL TO OPERATOR
+function testGreaterThanOrEqual(val) {
+  if (val >= 20) {
+    return "20 or Over";
+  }
+  if (val >= 10) {
+    return "10 or Over ";
+  }
+  return "Less than 10";
+}
+
+console.log(testGreaterThanOrEqual(10));
+
+//61.  COMPARISON WITH THE LESS THAN OPERATOR
+function testLessThan(val) {
+  if (val < 25) {
+    return "Under 25";
+  }
+  if (val < 55) {
+    return "Under 55";
+  }
+  return "55 or Over";
+}
+
+console.log(testLessThan(10));
+
+//62. COMPARISON WITH THE LESS THAN OR EQUAL TO OPERATOR
+function testLessOrEqual(val) {
+  if (val <= 12) {
+    return "Smaller than or equal to 12";
+  }
+  if (val <= 24) {
+    return "Smaller than or equal to 24";
+  }
+  return "More than 24";
+}
+
+console.log(testGreaterThanOrEqual(10));
+
+//63. COMPARISONS WITH THE LOGICAL AND OPERATOR
+function testLogicalAnd(val) {
+  if (val <= 50 && val >= 25) {
+    return "Yes";
+  }
+
+  return "No";
+}
+
+testLogicalAnd(10);
