@@ -676,3 +676,23 @@ function testLogicalAnd(val) {
 testLogicalAnd(10);
 
 //64. COMPRISONS WITH THE LOGICAL OR OPERATOR
+function testLogicalOr(val) {
+  if (val < 10 || val > 20) {
+    return "Outside";
+  }
+  return "Inside";
+}
+
+testLogicalOr(15);
+
+//65. ELSE STATEMENTS
+function testELse(val) {
+  var result = "";
+  if (val > 5) {
+    result = "Bigger than 5";
+  } else {
+    result = "5 or smaller";
+  }
+
+  return result;
+}
