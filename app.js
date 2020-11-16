@@ -696,3 +696,208 @@ function testELse(val) {
 
   return result;
 }
+
+//66. ELSE IF STATEMENTS
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 10";
+  }
+}
+
+testElseIf(7);
+
+//67. LOGICAL ORDER IN IF ELSE STATEMENTS
+function orderMyLogic(val) {
+  //WROOOOOOOOOONG
+  if (val < 10) {
+    return "Less that 10";
+  } else if (val < 5) {
+    return "Less than 5";
+  } else {
+    ("return Greater than or equal to 10");
+  }
+}
+
+console.log(orderMyLogic(4));
+
+function orderMyLogic(val) {
+  //RIGHTTTTTTTTTT
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    ("return Greater than or equal to 10");
+  }
+}
+console.log(orderMyLogic(4));
+
+//68.CHAINING IF ELSE STATEMENTS
+/*
+Write chained if/else if statements to fulfill the following conditions:
+
+num < 5   - return "Tiny"
+num < 10  - return "Small"
+num < 15  - return "Medium"
+num < 20  - return "Large"
+num >= 20 - return "Huge"
+*/
+function testSize(num) {
+  if (num < 5) {
+    return "Tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "Medium";
+  } else if (num < 20) {
+    return "Large";
+  } else {
+    return "Huge";
+  }
+}
+
+testSize(7);
+
+//69. GOLF CODE
+function golfScore(par, strokes) {
+  if (strokes > 0) {
+    if (strokes === 1) {
+      return "Hole-in one";
+    } else if (strokes <= par - 2) {
+      return "Eagle";
+    } else if (strokes === par - 1) {
+      return "Birdie";
+    } else if (strokes === par) {
+      return "Par";
+    } else if (strokes === par + 1) {
+      return "Bogey";
+    } else if (strokes === par + 2) {
+      return "Double Bogey";
+    } else {
+      return "Go Home";
+    }
+  }
+}
+
+console.log(golfScore(5, 4));
+
+//70. SWITCH STATEMENTS
+function caseInSwitch(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  }
+
+  return answer;
+}
+
+caseInSwitch(1);
+
+//71. DEFAULT OPTION IN SWTICH STATEMENTS
+function switchOfStuff(val) {
+  var answer = "";
+  switch (val) {
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c":
+      answer = "cat";
+      break;
+    default:
+      answer = "stuff";
+      break;
+  }
+  return answer;
+}
+console.log(switchOfStuff("a"));
+
+//72. MULTIPLE IDENTICAL OPTIONS IN SWITCH STATEMENTS
+function sequentialSizes(val) {
+  var answer = "";
+
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+
+  return answer;
+}
+
+console.log(sequentialSizes(1));
+
+//73. REPLACING IF ELSE CHAINS WITH SWITCH
+function example(val) {
+  var answer = "";
+
+  //Only change code below this line
+
+  if (val === "bob") {
+    answer = "Marley";
+  } else if (val === 42) {
+    answer = "The Answer";
+  } else if (val === 1) {
+    answer = "There is no #1";
+  } else if (val === 99) {
+    answer = "Missed me by this much!";
+  } else if (val === 7) {
+    answer = "Ate Nine";
+  }
+  return answer;
+}
+function chainToSwitch(val) {
+  var answer = "";
+
+  //Only change code below this line
+
+  switch (val) {
+    case "bob":
+      answer = "Marley";
+      break;
+    case 42:
+      answer = "The answer";
+      break;
+    case 1:
+      answer = "There is no #1";
+      break;
+    case 99:
+      answer = "Missed me by this much!";
+      break;
+    case 7:
+      answer = "Ate Nine";
+      break;
+    default:
+      break;
+  }
+  return answer;
+}
