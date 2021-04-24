@@ -901,3 +901,182 @@ function chainToSwitch(val) {
   }
   return answer;
 }
+
+
+//74. RETURNING BOOLEAN VALUES FROM FUNCTIONS
+function isLess(a,b){
+  return (a<b)
+}
+
+console.log(isLess(10,15));
+
+//75. RETURNING EARLY PATTER FROM FUNCTIONS
+function abTest(a,b){
+  if(a<0 || b <0){
+    return undefined
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b),2))
+}
+console.log(abTest(2,2))
+
+//76. COUNTING CARDS
+var count =0;
+
+function cc(card){
+  switch(card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--;
+      break;    
+
+  }
+
+  var holdbet = 'Hold';
+
+  if(count >0){
+    holdbet= 'Bet'
+  }
+  return count + " " + holdbet;
+}
+
+cc(2);cc(3);cc(7);cc('K');cc('A');
+console.log(cc(4))
+
+//77. BUILD JAVASCRIPT OBJECTS
+var ourDog = {
+  "name":"Camper",
+  "legs": 4,
+  "tails":1,
+  "friends": ["everything"]
+};
+
+var myDog = {
+  "name":"Quincy",
+  "legs":3,
+  "tails":2,
+  "friends": []
+}
+
+//78. ACCESSING OBJECT PROPERTIES WITH DOT NOTATION
+var testObject= {
+  "hat":"ballcap",
+  "shirt":"jersey",
+  "shoes":"cleats"
+};
+
+var hatValue = testObject.hat;
+var shirtValue = testObject.shirt;
+
+//79. ACCESSING OBJECT PROPERTIES WITH BRACKET NOTATION
+var anotherTestObject = {
+  "an entree":"hamburger",
+  "my sides":"veggies",
+  "the drink": "water"
+};
+
+var entreeValue= anotherTestObject["an entree"];
+var drinkValue= anotherTestObject["the drink"];
+
+//80. ACCESSING OBJECT PROPERTIES WITH VARIABLES
+var objectNew = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+}
+
+var playerNumber = 16
+var player= objectNew[playerNumber]
+
+//81. UPDATING OBJECT PROPERTIES
+ourDog.name = "Happy Camper";
+myDog.name = "Yellow"
+
+//82. ADD NEW PROPERTIES TO AN OBJECT
+ourDog.bark = "bow-wow";
+myDog['bark'] = "woof!";
+
+//83. DELETE PROPERTIES FROM AN OBJECT
+delete ourDog.bark;
+delete myDog["bark"];
+delete myDog.tails;
+
+//84. USING OBJECTS FOR LOOKUPS 
+function phoneticLookup(val){
+  var result = "";
+
+  var lookup = {
+  "alpha": "Adams",
+  "bravo": "Boston",
+  "charlie": "Chicago",
+  "delta": "Denver",
+  "echo":"Easy",
+  "foxtrot": "Frank"
+ };
+ result = lookup[val];
+ return result;
+
+}
+
+//85. TESTING OBJECTS FOR PROPERTIES
+var extraObj = {
+  gift: "pony",
+  pent: "kitten",
+  bed: "sleight"
+};
+
+function checkObject(checkProperty){
+  if(extraObj.hasOwnProperty(checkProperty)){
+    return extraObj[checkProperty];
+  }
+  else{
+    return "Not Found";
+  }
+}
+
+//86. MANIPULATING COMPLEX OBJECTS
+var myMusic = [
+  {
+    "artist":"Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats":[
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold":true
+  },
+  {
+    "artist":"Beau Carnes",
+    "title": "Cereal Man",
+    "release_year": 2003,
+    "formats":[
+      "Youtube video"
+    ]
+  }
+];
+
+//87. ACCESSING NESTED OBJECTS
+var myStorage = {
+  "car": {
+    "inside":{
+      "glove box":"maps",
+      "passenger seat":"crumbs"
+    },
+    "outside":{
+      "trunk":"jack"
+    }
+  }
+};
+
+var globeBoxContents= myStorage.car.inside["glove box"];
