@@ -1080,3 +1080,122 @@ var myStorage = {
 };
 
 var globeBoxContents= myStorage.car.inside["glove box"];
+
+//88. ACCESSING NESTED ARRAYS
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type:"trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+]
+
+var secondTree = myPlants[1].list[1];
+
+
+//89. RECORD COLLECTION
+var collection = {
+  "2548":{
+    "album":"Slippery When Wet",
+    "artist": "Bon Jovi",
+    "tracks": [
+      "Let It Rock",
+      "You Give Love a Bad Name"
+    ]
+  },
+  "2468":{
+    "album":"1999",
+    "artist": "Prince",
+    "tracks": [
+      "1999",
+      "Little Red Corvette"
+    ]
+  },
+  "1245":{
+    "artist": "Robert Palmer",
+    "tracks": []
+  },
+  "5439":{
+    "album": "ABBA Gold"
+  }
+};
+
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+//Only Change Code Below THIS LINE:
+function updateRecords(id,prop,value){
+  if(value === ""){
+    delete collection[id].prop;
+  }
+  else if(prop === "tracks"){
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value);
+  }
+  else {
+    collection[id][prop] = value;
+  }
+ 
+  return collection;
+}
+
+//90. ITERATE WITH WHILE LOOPS
+var myArray = [];
+var i = 0;
+while(i<5){
+  myArray.push(i);
+  i++;
+}
+
+//91. ITERATE WITH FOR LOOPS
+var ourArrayTwo = [];
+for (var i= 0; i<5; i++){
+  ourArrayTwo.push(i);
+}
+
+
+//92. ITERATE ODD NUMBERS WITH A FOR LOOP
+var oddArray = [];
+for(var i = 1; i<=9; i+=2){
+  oddArray.push(i)
+}
+
+//93. COUNT BACKWARDS WITH FOR LOOPS
+var againArray = []
+for (var i= 10; i>=0; i--){
+  ourArrayTwo.push(i);
+}
+
+//94. ITERATE THROUGH AN ARRAY WITH A FOR LOOP
+existingArray = [2,3,4,5,6];
+var lenghtExistingArray = existingArray.length;
+var total = 0;
+for (var i=2;i<=lenghtExistingArray;i++){
+  total += existingArray[i];
+}
+
+//95. NESTING FOR LOOPS
+function multiplyAll(arr){
+  var product = 1;
+  for(var i=0; i<=arr.length;i++){
+    for(var j=0; j<arr[i].length;j++){
+      product *= arr[i][j];
+    }
+  }
+  return product;
+}
+
+var product = multiplyAll([[1,2],[3,4],[5,6,7]])
+
+
+//96. ITERATE WITH DO WHILE LOOPS
